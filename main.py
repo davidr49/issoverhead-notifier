@@ -48,7 +48,7 @@ is_night()
 while True:
     time.sleep(60)
     if is_iss_overhead() and is_night():
-        with smtplib.SMTP("ENTER SMTP ADDRESS HERE") as connection:
+        with smtplib.SMTP("ENTER SMTP ADDRESS HERE") as connection:  #ENTER SMTP ADDRESS AS SHOWN
             connection.starttls()
             connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(
